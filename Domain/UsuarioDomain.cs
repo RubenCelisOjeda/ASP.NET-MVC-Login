@@ -1,4 +1,5 @@
 ﻿using Database;
+using Entidad.Usuario.Request;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,20 +29,20 @@ namespace Domain
         /// <param name="pUser"></param>
         /// <param name="pPassword"></param>
         /// <returns></returns>
-        public bool ValidateLogin(string pUser, string pPassword)
+        public List<string> ValidateLogin(LoginRequest entidad)
         {
-            bool isValid = false;
+            List<string> listResponse = null;
 
             try
             {
-                var response = oUsuarioDatabase.ValidateLogin(pUser, pPassword);
-                isValid = response;
+                var response = oUsuarioDatabase.ValidateLogin(entidad);
+                listResponse = response;
             }
             catch (Exception e)
             {
                  e.Message.ToString();
             }
-            return isValid;
+            return listResponse;
         }
         #endregion
     }

@@ -21,8 +21,8 @@ try {
         var passwordLocal = $('#txtPassword').val();
 
         var oData = {
-            usuario: usuarioLocal,
-            password: passwordLocal
+            User: usuarioLocal,
+            Password: passwordLocal
         };
 
         $.ajax({

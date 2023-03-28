@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Entidad.Usuario.Request;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -34,9 +35,9 @@ namespace WebAppLogin.Controllers
 
         #region [Methods]
         [HttpGet]
-        public ActionResult ValidateLogin(string usuario,string password)
+        public ActionResult ValidateLogin(LoginRequest entidad)
         {
-            var response = oUsuarioDomain.ValidateLogin(usuario, password);
+            var response = oUsuarioDomain.ValidateLogin(entidad);
             return Json(response);
         }
         #endregion

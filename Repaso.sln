@@ -8,12 +8,19 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Domain", "2.Domain", "{51DD63C2-6317-466B-85E1-C2A0C07778AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Database", "3.Database", "{05FFC3B5-730E-4318-AD0D-F9002FAC6176}"
+	ProjectSection(SolutionItems) = preProject
+		Domain\UsuarioDomain.cs = Domain\UsuarioDomain.cs
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppLogin", "WebAppLogin\WebAppLogin.csproj", "{1C62BA2A-0197-4CB6-8096-DDA73BAE297B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppLogin", "WebAppLogin\WebAppLogin.csproj", "{1C62BA2A-0197-4CB6-8096-DDA73BAE297B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B1C45BC9-CA93-451E-BC07-D641765CECBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B1C45BC9-CA93-451E-BC07-D641765CECBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{C1367D98-8C6D-4C27-A673-5450C64A0BD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Database\Database.csproj", "{C1367D98-8C6D-4C27-A673-5450C64A0BD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Entidad", "4.Entidad", "{35641DBC-00E4-4FF8-9E45-29BAC72AFB9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidad", "Entidad\Entidad.csproj", "{0C8C5F07-EE45-41DD-B31C-B759F77555DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +40,10 @@ Global
 		{C1367D98-8C6D-4C27-A673-5450C64A0BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1367D98-8C6D-4C27-A673-5450C64A0BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1367D98-8C6D-4C27-A673-5450C64A0BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C8C5F07-EE45-41DD-B31C-B759F77555DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C8C5F07-EE45-41DD-B31C-B759F77555DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C8C5F07-EE45-41DD-B31C-B759F77555DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C8C5F07-EE45-41DD-B31C-B759F77555DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +52,7 @@ Global
 		{1C62BA2A-0197-4CB6-8096-DDA73BAE297B} = {C0A13889-B22D-4349-AB9D-17DD6E17021E}
 		{B1C45BC9-CA93-451E-BC07-D641765CECBF} = {51DD63C2-6317-466B-85E1-C2A0C07778AC}
 		{C1367D98-8C6D-4C27-A673-5450C64A0BD5} = {05FFC3B5-730E-4318-AD0D-F9002FAC6176}
+		{0C8C5F07-EE45-41DD-B31C-B759F77555DD} = {35641DBC-00E4-4FF8-9E45-29BAC72AFB9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C34AC00D-4909-41B6-A5F4-DE623AE57D6A}

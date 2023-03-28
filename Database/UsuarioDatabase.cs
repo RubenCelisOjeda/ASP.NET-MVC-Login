@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Dapper;
+using Database.Configuracion;
+using Entidad.Usuario.Request;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Text;
 
 namespace Database
@@ -10,7 +15,7 @@ namespace Database
     public class UsuarioDatabase
     {
         #region [Properties]
-
+        private readonly Conexion connection = null;
         #endregion
 
         #region [Constructor]
@@ -19,7 +24,7 @@ namespace Database
         /// </summary>
         public UsuarioDatabase()
         {
-
+            connection = new Conexion();
         }
         #endregion
 
@@ -30,16 +35,30 @@ namespace Database
         /// <param name="pUser"></param>
         /// <param name="pPassword"></param>
         /// <returns></returns>
-        public bool ValidateLogin(string pUser, string pPassword )
+        public List<string> ValidateLogin(LoginRequest entidad )
         {
-            bool isValid = false;
+            using (var cn = connection.GetConnectionSeguridad)
+            {
 
-            if (pUser!= null && pPassword != null)
-                isValid = true;
+                #region [Query]
+                const string query = @"SELECT usu.Id
+                                           FROM Usuarios usu";
+                #endregion
 
-            return isValid;
+                #region [Parameters]
+                //var parameters = new DynamicParameters();
+                //parameters.Add("@pUser", entidad.User, DbType.String);
+                //parameters.Add("@pPassword", entidad.Password, DbType.String);
+                #endregion
+
+                #region [Execute]
+                var response =  cn.Query<string>(query, commandType: CommandType.Text);
+                //var response = cn.Query<string>(query, commandType: CommandType.StoredProcedure);
+                return response.ToList();
+                #endregion
+
+            }
         }
-
         #endregion
     }
 }
